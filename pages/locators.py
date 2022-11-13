@@ -7,6 +7,11 @@ class MainPageLocators:
     ALL_PRODUCTS = (By.XPATH, '//ul[@class="dropdown-menu"]/li[1]/a[1]')
 
 
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "form#register_form")
