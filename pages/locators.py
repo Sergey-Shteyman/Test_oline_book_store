@@ -28,3 +28,9 @@ class ProductPageLocators:
 
 class AllProductsPageLocators:
     SHELL_CODERS_BOOK = (By.CSS_SELECTOR, "div.image_container :nth-child(1) > img.thumbnail")
+
+
+class BasketPageLocators:
+    VIEW_BASKET = (By.CSS_SELECTOR, "span.btn-group > a.btn.btn-default")
+    CONTINUE_SHOPPING = (By.CSS_SELECTOR, "div#content_inner > p > a")
+    EMPTY_BASKET_MESSAGE = (By.CSS_SELECTOR, "div#content_inner > p")
