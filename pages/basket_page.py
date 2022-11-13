@@ -12,3 +12,7 @@ class BasketPage(BasePage):
         empty_basket_message = self.browser.find_element(*BasketPageLocators.EMPTY_BASKET_MESSAGE).text.split(" ")
         empty_basket_message = " ".join(empty_basket_message[:-2])
         assert empty_basket_message in Languages.empty_basket_messages.values(), "No message about empty basket"
+
+    def should_not_be_empty_basket(self):
+        assert self.is_not_element_present(*BasketPageLocators.CONTINUE_SHOPPING), \
+            "Basket is empty, but should not be"

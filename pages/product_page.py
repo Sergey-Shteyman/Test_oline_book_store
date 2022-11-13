@@ -18,7 +18,7 @@ class ProductPage(BasePage):
 
     def success_message_is_disappeared(self):
         assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
-            "Success message is not disappeared, but should not be"
+            "Success message is disappeared, but should not be"
 
     def added_product_should_be_actual(self):
         """Метод, который проверяет, совпадает ли добавленная книга с текущей."""
