@@ -10,11 +10,16 @@ class MainPageLocators:
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 
 class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "form#login_form")
     REGISTER_FORM = (By.CSS_SELECTOR, "form#register_form")
+    EMAIL_LABEL = (By.CSS_SELECTOR, 'input[name="registration-email"]')
+    PASSWORD_LABEL = (By.CSS_SELECTOR, 'input[name="registration-password1"]')
+    REPEAT_PASSWORD_LABEL = (By.CSS_SELECTOR, 'input[name="registration-password2"]')
+    REGISTRATION_SUBMIT_BUTTON = (By.CSS_SELECTOR, 'button[name="registration_submit"]')
 
 
 class ProductPageLocators:
