@@ -20,12 +20,15 @@ class BasePage:
         self.browser.get(self.url)
 
     def go_to_login_page(self):
+        if self.is_element_present(*BasePageLocators.LOGOUT):
+            self.browser.find_element(*BasePageLocators.LOGOUT).click()
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
         # alert = self.browser.switch_to.alert
         # alert.accept()
 
     def should_be_authorized_user(self):
+        self.browser.implicitly_wait(3)
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
                                                                      " probably unauthorised user"
 
@@ -34,6 +37,8 @@ class BasePage:
         link.click()
 
     def should_be_login_link(self):
+        if self.is_element_present(*BasePageLocators.LOGOUT):
+            self.browser.find_element(*BasePageLocators.LOGOUT).click()
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
     def is_element_present(self, how, what):
